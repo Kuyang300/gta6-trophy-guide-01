@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Roadmap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every trophy, its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum — and a tracker that saves your progress in this browser. Works fully offline.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+    <p id="progressText">0 of 55 earned · Platinum 0% there</p>
+    <div class="bar"><div class="bar-fill" id="progressBar" style="width:0%"></div></div>
+    <p class="mini" id="kindCounts"></p>
+  </div>
+</header>
+
+<section class="missable-banner" id="missableBanner">
+  <strong>One trophy can be missed.</strong>
+  <span>Positive Mental Attitude — meditate with Lucia on the balcony at Jason's house in Chapter 1, after the Down to Earth mission, before the chapter ends. Everything else on the list can be earned in free roam after the story. Full warning in the roadmap below.</span>
+</section>
+
+<nav class="toolbar" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…"></label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="side">Side strands</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="money">Money</option>
+      <option value="completion">Completion</option>
+      <option value="misc">Everything else</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <label class="check"><input id="spoilerToggle" type="checkbox"> Spoiler-free: hide story trophies until earned</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  <button id="resetBtn" type="button">Reset</button>
+</nav>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-intro">About 200 hours, difficulty 4 out of 10, one playthrough, no online trophies and no mission replay. Play the story first, then the side strands, then clean up the open world, then the money — the checklist only becomes viewable after the story, under Progress, then Stats, then 100% Completion. Sources: PowerPyx and KeenGamer roadmaps.</p>
+  <div class="stages" id="stages"></div>
+  <p class="roadmap-note"><strong>Missables:</strong> only Positive Mental Attitude is possibly missable (see the banner). Story trophies cannot be missed — finishing the story earns them all. Cheats disable trophies and saving, so play clean. Side quest givers who go quiet during the story come back later.</p>
+</section>
+
+<main class="layout">
+  <section class="list-col" aria-label="Trophy checklist">
+    <h2 id="listHeading">Checklist</h2>
+    <p class="mini" id="listCount"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. The official list has no online trophies — that filter is here because the rules ask for it.</p>
+  </section>
+  <aside class="detail-col" aria-label="Trophy guide">
+    <div id="detail" class="detail">
+      <h2>Pick a trophy</h2>
+      <p>Select any trophy in the checklist to see its official description, the guide, its steps and its sources here. Tick the box beside a trophy when you earn it — your progress is saved in this browser.</p>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades: the official list as listed by Exophase and PSNProfiles. Roadmap facts (200 hours, 4/10, one missable, no mission replay, 100% checklist): PowerPyx, KeenGamer and GTASpotter. Each trophy's guide names its own sources beside it. Guides are written for this entry in our own words; where a method is only drawn from the official description, the guide says so plainly.</p>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games. No official artwork or logos are used. All data lives in your browser — nothing is sent anywhere.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
